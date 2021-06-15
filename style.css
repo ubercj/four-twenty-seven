@@ -53,25 +53,148 @@ table {
   border-spacing: 0;
 }
 
+body {
+  background-color: white !important;
+}
+
 .test {
-  border: 1px solid darkcyan;
   min-height: 100px;
+  text-align: center;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
 }
 
 button {
   padding: 0.3rem;
+  background-color: inherit;
   border: 1px solid black;
   border-radius: 0;
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
 .navbar {
+  position: static !important;
   border-bottom: 2px solid black;
+}
+
+.subnav {
+  border-bottom: none;
 }
 
 .navbar-heading {
   font-size: 1.5rem;
 }
 
+.menu,
+.logo,
+.circle {
+  display: flex;
+  align-items: center;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.menu button,
+.circle {
+  margin-left: 1rem;
+}
+
+.circle {
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 0.7rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  margin-right: 1.2rem;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.wrapper {
+  margin-top: 0 !important;
+}
+
+.main-feature,
+.featured,
+.latest,
+.interactive {
+  border-bottom: 1px solid gray;
+  margin-bottom: 1rem;
+}
+
+.latest:first-of-type,
+.interactive:first-of-type {
+  border-top: 1px solid gray;
+}
+
+.main-feature {
+  height: 400px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 766px) {
+  .no-mobile {
+    display: none !important;
+  }
+
+  .story {
+    border-bottom: 1px solid gray;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .feed,
+.left-column {
+    border-right: 1px solid gray;
+  }
+
+  .more {
+    border-top: 1px solid gray;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
 * {
   box-sizing: border-box;
 }
