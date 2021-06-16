@@ -38,6 +38,10 @@ body {
   color: $font-color;
 }
 
+i {
+  font-style: italic;
+}
+
 .lighter {
   color: lighten($color: $font-color, $amount: 50%)
 }
@@ -144,17 +148,140 @@ nav a:hover {
   padding-top: 1rem;
 }
 
+.play,
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play {
+  background-image: url(../images/staring-fox.jpg);
+  background-size: cover;
+  padding: 1rem;
+}
+
+.video {
+  min-height: 400px;
+  position: relative;
+}
+
+.video:after {
+  content: "";
+  background-image: url(../images/fighting-foxes.jpg);
+  background-size: cover;
+  opacity: .5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.vid-buttons {
+  justify-content: space-between;
+}
+
+.newsletter {
+  background-color: rgb(226, 201, 154);
+  padding: 1rem;
+  margin-top: 1rem;
+  >div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  p {
+    margin-top: 1rem;
+    font-size: .8rem;
+    line-height: 1rem;
+    a {
+      color: rgb(0, 110, 255);
+    }
+  }
+  h2 {
+    margin-left: 1rem;
+    margin-bottom: 0!important;
+  }
+  h3 {
+    margin-top: 1rem;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.control {
+  justify-content: space-between;
+  input,
+  button {
+    width: 100%;
+    height: 100%;
+    padding: .4rem;
+  }
+}
+
 // ---------------------- Footer ------------------------
 
 footer {
-  background-color: black;
+  background-color: rgb(36, 36, 36);
   color: white;
-
   width: 100%;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+
+  .row {
+    border-bottom: 1px solid gray;
+  }
+
+  .social {
+    justify-content: center;
+    border-top: 1px solid gray;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .copyright {
+    margin-top: 1rem;
+  }
+
+  button {
+    background-color: rgb(0, 110, 255);
+    color: white;
+    border-radius: 5%;
+  }
+
+  button:hover {
+    background-color: darken($color: rgb(0, 110, 255), $amount: 20%);
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  li {
+    margin-top: 1rem;
+  }
+
+  a:hover {
+    color: darken($color: white, $amount: 50%);
+  }
+}
+
+.darker {
+  color: #666;
+  a {
+    color: white;
+  }
+}
+
+.power {
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 // ---------------------- Utilities ------------------------
@@ -163,8 +290,20 @@ footer {
   text-align: left;
 }
 
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
 .mt-0 {
   margin-top: 0!important;
+}
+
+.bb-0 {
+  border-bottom: 0!important;
 }
 
 //****************************************************************************
@@ -192,7 +331,7 @@ footer {
 // ---------------- Tablet+Desktop -----------------
 @media screen and (min-width: 767px) {
   .mobile-only {
-    display: none;
+    display: none!important;
   }
   .feed,
   .left-column {
@@ -212,6 +351,18 @@ footer {
     text-decoration: underline;
     text-decoration-color: gray;
   }
+  footer {
+    >.row:first-child {
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      margin-bottom: 1rem;
+    }
+    ul {
+      flex-direction: row;
+    }
+  }
 }
 
 // ---------------- Desktop only -----------------
@@ -219,5 +370,11 @@ footer {
   .wrapper {
     margin-left: auto!important;
     margin-right: auto!important;
+  }
+  .mail {
+    flex-direction: row!important;
+  }
+  .sign-up {
+    align-items: flex-start!important;
   }
 }

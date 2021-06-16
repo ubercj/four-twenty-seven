@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cantarell&family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -86,6 +86,10 @@ button:hover {
 
 body {
   color: black;
+}
+
+i {
+  font-style: italic;
 }
 
 .lighter {
@@ -187,22 +191,150 @@ nav a:hover {
   padding-top: 1rem;
 }
 
+.play,
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play {
+  background-image: url(../images/staring-fox.jpg);
+  background-size: cover;
+  padding: 1rem;
+}
+
+.video {
+  min-height: 400px;
+  position: relative;
+}
+
+.video:after {
+  content: "";
+  background-image: url(../images/fighting-foxes.jpg);
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.vid-buttons {
+  justify-content: space-between;
+}
+
+.newsletter {
+  background-color: #e2c99a;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.newsletter > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter p {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+.newsletter p a {
+  color: #006eff;
+}
+.newsletter h2 {
+  margin-left: 1rem;
+  margin-bottom: 0 !important;
+}
+.newsletter h3 {
+  margin-top: 1rem;
+}
+.newsletter a:hover {
+  text-decoration: underline;
+}
+
+.control {
+  justify-content: space-between;
+}
+.control input,
+.control button {
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem;
+}
+
 footer {
-  background-color: black;
+  background-color: #242424;
   color: white;
   width: 100%;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+}
+footer .row {
+  border-bottom: 1px solid gray;
+}
+footer .social {
+  justify-content: center;
+  border-top: 1px solid gray;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+footer .copyright {
+  margin-top: 1rem;
+}
+footer button {
+  background-color: #006eff;
+  color: white;
+  border-radius: 5%;
+}
+footer button:hover {
+  background-color: #004299;
+}
+footer ul {
+  flex-direction: column;
+}
+footer li {
+  margin-top: 1rem;
+}
+footer a:hover {
+  color: gray;
+}
+
+.darker {
+  color: #666;
+}
+.darker a {
+  color: white;
+}
+
+.power {
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .align-left {
   text-align: left;
 }
 
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
 .mt-0 {
   margin-top: 0 !important;
+}
+
+.bb-0 {
+  border-bottom: 0 !important;
 }
 
 @media screen and (max-width: 766px) {
@@ -226,7 +358,7 @@ footer {
 }
 @media screen and (min-width: 767px) {
   .mobile-only {
-    display: none;
+    display: none !important;
   }
 
   .feed,
@@ -249,11 +381,30 @@ h3:hover {
     text-decoration: underline;
     text-decoration-color: gray;
   }
+
+  footer > .row:first-child {
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer button {
+    margin-bottom: 1rem;
+  }
+  footer ul {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 1024px) {
   .wrapper {
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+
+  .mail {
+    flex-direction: row !important;
+  }
+
+  .sign-up {
+    align-items: flex-start !important;
   }
 }
 * {
