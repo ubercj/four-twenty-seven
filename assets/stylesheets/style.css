@@ -59,7 +59,6 @@ body {
 
 .test {
   min-height: 100px;
-  text-align: center;
 }
 
 a {
@@ -78,6 +77,43 @@ button:hover {
   cursor: pointer;
   background-color: black;
   color: white;
+}
+
+.wrapper {
+  margin-top: 0 !important;
+  max-width: 1048px;
+}
+
+body {
+  color: black;
+}
+
+.lighter {
+  color: gray;
+}
+
+.smallcap {
+  font-variant: small-caps;
+}
+
+.latest p,
+cite {
+  font-size: 0.75rem;
+}
+
+h2,
+h3,
+h4,
+p {
+  margin-bottom: 0.5rem !important;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+}
+
+.full-img {
+  width: 100%;
 }
 
 .navbar {
@@ -131,29 +167,24 @@ nav a:hover {
   color: gray;
 }
 
-.align-left {
-  text-align: left;
-}
-
-.wrapper {
-  margin-top: 0 !important;
-}
-
 .main-feature,
 .featured,
 .latest,
 .interactive {
   border-bottom: 1px solid gray;
+  padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 
 .latest:first-of-type,
 .interactive:first-of-type {
   border-top: 1px solid gray;
+  padding-top: 1rem;
 }
 
-.main-feature {
-  height: 400px;
+.podcast {
+  background-color: #e2c99a;
+  padding-top: 1rem;
 }
 
 footer {
@@ -166,6 +197,14 @@ footer {
   padding-right: 1rem;
 }
 
+.align-left {
+  text-align: left;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
 @media screen and (max-width: 766px) {
   .no-mobile {
     display: none !important;
@@ -174,6 +213,15 @@ footer {
   .story {
     border-bottom: 1px solid gray;
     margin-bottom: 1rem;
+  }
+
+  .story:first-of-type {
+    border-top: 1px solid gray;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .desktop-only {
+    display: none !important;
   }
 }
 @media screen and (min-width: 767px) {
@@ -184,15 +232,28 @@ footer {
   .feed,
 .left-column {
     border-right: 1px solid gray;
+    padding-right: 0.6rem;
   }
 
   .more {
     border-top: 1px solid gray;
+    position: relative;
+  }
+  .more .row {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  h2:hover,
+h3:hover {
+    text-decoration: underline;
+    text-decoration-color: gray;
   }
 }
-@media screen and (max-width: 1023px) {
-  .desktop-only {
-    display: none !important;
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 * {

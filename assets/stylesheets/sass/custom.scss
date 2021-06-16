@@ -5,7 +5,6 @@ body {
 .test {
   // border: 1px solid darkcyan;
   min-height: 100px;
-  text-align: center;
 }
 
 a {
@@ -24,6 +23,49 @@ button:hover {
   cursor: pointer;
   background-color: black;
   color: white;
+}
+
+.wrapper {
+  margin-top: 0!important;
+  max-width: 1048px;
+}
+
+// ---------------------- Text Elements ------------------------
+
+$font-color: black;
+
+body {
+  color: $font-color;
+}
+
+.lighter {
+  color: lighten($color: $font-color, $amount: 50%)
+}
+
+.smallcap {
+  font-variant: small-caps;
+}
+
+.latest p,
+cite {
+  font-size: .75rem;
+}
+
+h2,
+h3,
+h4,
+p {
+  margin-bottom: .5rem!important;
+}
+
+h3 {
+  font-size: 1.5rem!important;
+}
+
+// ---------------------- Images ------------------------
+
+.full-img {
+  width: 100%;
 }
 
 // ---------------------- Navbars ------------------------
@@ -80,32 +122,29 @@ nav a:hover {
   color: lighten(black, 50%);
 }
 
-// ----------------------  ------------------------
-
-.align-left {
-  text-align: left;
-}
-
-.wrapper {
-  margin-top: 0!important;
-}
+// ---------------------- Grid Elements ------------------------
 
 .main-feature,
 .featured,
 .latest,
 .interactive {
   border-bottom: 1px solid gray;
+  padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 
 .latest:first-of-type,
 .interactive:first-of-type {
   border-top: 1px solid gray;
+  padding-top: 1rem;
 }
 
-.main-feature {
-  height: 400px;
+.podcast {
+  background-color: rgb(226, 201, 154);
+  padding-top: 1rem;
 }
+
+// ---------------------- Footer ------------------------
 
 footer {
   background-color: black;
@@ -118,6 +157,17 @@ footer {
   padding-right: 1rem;
 }
 
+// ---------------------- Utilities ------------------------
+
+.align-left {
+  text-align: left;
+}
+
+.mt-0 {
+  margin-top: 0!important;
+}
+
+//****************************************************************************
 // ---------------- Mobile -----------------
 @media screen and (max-width: 766px) {
   .no-mobile {
@@ -126,6 +176,16 @@ footer {
   .story {
     border-bottom: 1px solid gray;
     margin-bottom: 1rem;
+  }
+  .story:first-of-type {
+    border-top: 1px solid gray;
+  }
+}
+
+// ---------------- Mobile+Tablet -----------------
+@media screen and (max-width: 1023px) {
+  .desktop-only {
+    display: none!important;
   }
 }
 
@@ -137,15 +197,27 @@ footer {
   .feed,
   .left-column {
     border-right: 1px solid gray;
+    padding-right: .6rem;
   }
   .more {
     border-top: 1px solid gray;
+    position: relative;
+    .row {
+      flex-direction: column;
+      flex-direction: column-reverse;
+    }
+  }
+  h2:hover,
+  h3:hover {
+    text-decoration: underline;
+    text-decoration-color: gray;
   }
 }
 
-// ---------------- Mobile+Tablet -----------------
-@media screen and (max-width: 1023px) {
-  .desktop-only {
-    display: none!important;
+// ---------------- Desktop only -----------------
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    margin-left: auto!important;
+    margin-right: auto!important;
   }
 }
