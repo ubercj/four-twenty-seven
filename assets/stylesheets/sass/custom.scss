@@ -2,11 +2,6 @@ body {
   background-color: white!important;
 }
 
-.test {
-  // border: 1px solid darkcyan;
-  min-height: 100px;
-}
-
 a {
   text-decoration: inherit;
   color: inherit;
@@ -128,6 +123,10 @@ nav a:hover {
 
 // ---------------------- Grid Elements ------------------------
 
+.top-columns {
+  border-bottom: 1px solid gray;
+}
+
 .main-feature,
 .featured,
 .latest,
@@ -220,6 +219,30 @@ nav a:hover {
     height: 100%;
     padding: .4rem;
   }
+}
+
+.interactive {
+  .row {
+    justify-content: center;
+  }
+  .graphic {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid gray;
+    padding-top: .5rem;
+  }
+  .team {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+  }
+  .team:first-of-type {
+    margin-top: .5rem;
+  }
+}
+
+.interactive:last-of-type {
+  border-bottom: none;
 }
 
 // ---------------------- Footer ------------------------
@@ -318,6 +341,14 @@ footer {
   }
   .story:first-of-type {
     border-top: 1px solid gray;
+  }
+  .graphs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .interactive {
+    width: 400px;
   }
 }
 

@@ -57,10 +57,6 @@ body {
   background-color: white !important;
 }
 
-.test {
-  min-height: 100px;
-}
-
 a {
   text-decoration: inherit;
   color: inherit;
@@ -171,6 +167,10 @@ nav a:hover {
   color: gray;
 }
 
+.top-columns {
+  border-bottom: 1px solid gray;
+}
+
 .main-feature,
 .featured,
 .latest,
@@ -265,6 +265,28 @@ nav a:hover {
   padding: 0.4rem;
 }
 
+.interactive .row {
+  justify-content: center;
+}
+.interactive .graphic {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid gray;
+  padding-top: 0.5rem;
+}
+.interactive .team {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.interactive .team:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.interactive:last-of-type {
+  border-bottom: none;
+}
+
 footer {
   background-color: #242424;
   color: white;
@@ -349,6 +371,16 @@ footer a:hover {
 
   .story:first-of-type {
     border-top: 1px solid gray;
+  }
+
+  .graphs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interactive {
+    width: 400px;
   }
 }
 @media screen and (max-width: 1023px) {
