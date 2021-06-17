@@ -1,6 +1,6 @@
 # FourTwentySeven, a mock up of the FiveThirtyEight website layout
 
-See the site live [here](https://ubercj.github.io/four-twenty-seven/).
+See the site live [here](https://ubercj.github.io/four-twenty-seven/), compare it to [FiveThirtyEight's website](https://fivethirtyeight.com/). And use responsive mode to check it out on different screen sizes!
 
 This is part of the final project for the CSS portion of The Odin Project's full-stack web development curriculum. Read more about the project [here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/html-and-css/lessons/design-your-own-grid-based-framework).
 
@@ -8,7 +8,7 @@ The first part of the project was creating my own [grid-based CSS framework](htt
 
 Overall, I was pleasantly surprised with how easy it was to use my framework. It was easy to layer on new styles on top of the framework stylesheet. There were a few "feature" that I was really missing from my framework, though - in particular classes to allow you to easily hide/display elements based on the screen size. Partly because of this, I ended up having to create some pretty elaborate media queries. I also could have included some more basic styling for common elements like links and buttons.
 
-Ultimately, I wasn't setting out to recreate Bootstrap or anything, so I'm satisfied with what I came up with. Creating the layout was _a lot_ faster with the framework. And I still stand by the decision to make it fairly barebones so it can be customized easily.
+Ultimately, I wasn't setting out to recreate Bootstrap or anything, so I'm satisfied with what I came up with. Creating the layout was _a lot_ faster with the framework, especially the responsive elements and multiple layouts for different screen sizes! And I still stand by the decision to make it fairly barebones so it can be customized easily.
 
 ### Photo Credits
 
