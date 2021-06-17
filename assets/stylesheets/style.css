@@ -67,6 +67,7 @@ button {
   background-color: inherit;
   border: 1px solid black;
   border-radius: 0;
+  transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
@@ -184,6 +185,10 @@ nav a:hover {
 .interactive:first-of-type {
   border-top: 1px solid gray;
   padding-top: 1rem;
+}
+
+.center-button {
+  justify-content: center;
 }
 
 .podcast {
