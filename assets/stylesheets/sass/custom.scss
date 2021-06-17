@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+
+$special-font: 'Rubik', arial, sans-serif;
+
 body {
   background-color: white!important;
 }
@@ -31,6 +35,13 @@ button:hover {
 
 $font-color: black;
 
+h2,
+h3 {
+  font-family: $special-font!important;
+  font-weight: bold;
+  font-size: 1.2rem!important;
+}
+
 body {
   color: $font-color;
 }
@@ -57,10 +68,6 @@ h3,
 h4,
 p {
   margin-bottom: .5rem!important;
-}
-
-h3 {
-  font-size: 1.5rem!important;
 }
 
 // ---------------------- Images ------------------------
@@ -212,6 +219,10 @@ nav a:hover {
   h3 {
     margin-top: 1rem;
   }
+  h2:hover,
+  h3:hover {
+    text-decoration: none;
+  }
   a:hover {
     text-decoration: underline;
   }
@@ -244,6 +255,10 @@ nav a:hover {
   }
   .team:first-of-type {
     margin-top: .5rem;
+  }
+  h4 {
+    font-family: $special-font!important;
+    font-weight: bold;
   }
 }
 

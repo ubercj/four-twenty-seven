@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -81,6 +82,13 @@ button:hover {
   max-width: 1048px;
 }
 
+h2,
+h3 {
+  font-family: "Rubik", arial, sans-serif !important;
+  font-weight: bold;
+  font-size: 1.2rem !important;
+}
+
 body {
   color: black;
 }
@@ -107,10 +115,6 @@ h3,
 h4,
 p {
   margin-bottom: 0.5rem !important;
-}
-
-h3 {
-  font-size: 1.5rem !important;
 }
 
 .full-img {
@@ -256,6 +260,10 @@ nav a:hover {
 .newsletter h3 {
   margin-top: 1rem;
 }
+.newsletter h2:hover,
+.newsletter h3:hover {
+  text-decoration: none;
+}
 .newsletter a:hover {
   text-decoration: underline;
 }
@@ -286,6 +294,10 @@ nav a:hover {
 }
 .interactive .team:first-of-type {
   margin-top: 0.5rem;
+}
+.interactive h4 {
+  font-family: "Rubik", arial, sans-serif !important;
+  font-weight: bold;
 }
 
 .interactive:last-of-type {
